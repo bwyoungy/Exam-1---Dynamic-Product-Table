@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 1 - Dynamic Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <h2>Add Product</h2>
+    <form onsubmit="return false" id="addProductForm">
+        <label for="productName">Name:
+            <input type="text" id="productName" class="productInputField">
+        </label>
+
+        <label for="productPrice">Price:
+            <input type="number" id="productPrice" class="productInputField">
+        </label>
+
+        <label for="productCategory">Category:
+            <select id="productCategory" class="productInputField">
+                <option value="">(select one)</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Meat">Meat</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Basic">Basic</option>
+            </select>
+        </label>
+
+        <label for="productImageLink">Image (link):
+            <input type="text" id="productImageLink" class="productInputField">
+        </label>
+
+        <button onclick="addProduct()">Add Product</button>
+
+        <span id="errorMessage"></span>
+    </form>
+
+    <h2>My Cart</h2>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </thead>
+        <tbody id="productsTable">
+
+        </tbody>
+    </table>
+</body>
+</html>
